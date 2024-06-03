@@ -13,7 +13,7 @@ const ProfilePage = async () => {
   });
 
   if (!user.member?.contactId) {
-    return <div className="">Not logged in!</div>;
+    return <div className="text-gray-700">Not logged in!</div>;
   }
 
   const orderRes = await wixClient.orders.searchOrders({
@@ -23,7 +23,7 @@ const ProfilePage = async () => {
   });
 
   return (
-    <div className="flex flex-col md:flex-row gap-24 md:h-[calc(100vh-180px)] items-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+    <div className="flex flex-col md:flex-row gap-24 md:h-[calc(100vh-180px)] mt-9 items-center px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
       <div className="w-full md:w-1/2">
         <h1 className="text-2xl">Profile</h1>
         <form action={updateUser} className="mt-12 flex flex-col gap-4">
@@ -81,7 +81,7 @@ const ProfilePage = async () => {
             >
               <span className="w-1/4">{order._id?.substring(0, 10)}...</span>
               <span className="w-1/4">
-                ${order.priceSummary?.subtotal?.amount}
+                #{order.priceSummary?.subtotal?.amount}
               </span>
               {order._createdDate && (
                 <span className="w-1/4">{format(order._createdDate)}</span>

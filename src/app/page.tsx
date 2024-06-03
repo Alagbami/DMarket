@@ -13,26 +13,26 @@ const HomePage = async () => {
 
   // TEST (FETCHING ON THE CLIENT COMPONENT)
 
-  // const wixClient = useWixClient()
+  //const wixClient = useWixClient()
 
-  // useEffect(() => {
+  //useEffect(() => {
   //   const getProducts = async () => {
-  //     const res = await wixClient.products.queryProducts().find();
+  //   const res = await wixClient.products.queryProducts().find();
 
-  //     console.log(res)
+  //   console.log(res)
   //   };
 
-  //   getProducts();
-  // }, [wixClient]);
+  //  getProducts();
+  //}, [wixClient]);
   
 
   // TEST (FETCHING ON THE SERVER COMPONENT)
 
-  // const wixClient = await wixClientServer();
+ //const wixClient = await wixClientServer();
 
-  // const res = await wixClient.products.queryProducts().find();
+//const res = await wixClient.products.queryProducts().find();
 
-  // console.log(res);
+  //console.log(res);
 
   return (
     <div className="">
