@@ -23,6 +23,7 @@ export const useCartStore = create<CartState>((set) => ({
   getCart: async (wixClient) => {
     try {
       const cart = await wixClient.currentCart.getCurrentCart();
+      //console.log(cart)
       set({
         cart: cart || [],
         isLoading: false,

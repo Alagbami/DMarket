@@ -1,4 +1,4 @@
-/*import { wixClientServer } from "@/lib/wixClientServer";
+import { wixClientServer } from "@/lib/wixClientServer";
 import { products } from "@wix/stores";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,6 +48,11 @@ const ProductList = async ({
   }
 
   const res = await productQuery.find();
+  console.log(res)
+  // TEST INITIAL CREATED BY ME  
+ // function mycon(){
+   //console.log(res)
+  //}
 
   return (
     <div className="mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap">
@@ -98,7 +103,7 @@ const ProductList = async ({
       ))}
       {searchParams?.cat || searchParams?.name ? (
         <Pagination
-          currentPage={res.currentPage || 0}
+          currentPage={res.currentPage || 4}
           hasPrev={res.hasPrev()}
           hasNext={res.hasNext()}
         />
@@ -106,8 +111,8 @@ const ProductList = async ({
     </div>
   );
 };
-export default ProductList; */
-
+export default ProductList;
+/*
 ///////////// PROBLEM SOLVE WITH THE HELP OF CHAT-GPT BELOW, CHECK ORIGINAL CODE ABOVE ////////
 
 import { wixClientServer } from "@/lib/wixClientServer";
@@ -229,4 +234,4 @@ const ProductList = async ({
   }
 };
 
-export default ProductList;
+export default ProductList; */
